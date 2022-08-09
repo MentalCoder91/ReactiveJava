@@ -2,7 +2,12 @@ package com.reactor.courseUtil;
 
 import java.util.function.Consumer;
 
+import com.github.javafaker.Faker;
+
 public class Util {
+	
+	
+	private static final Faker FAKER =Faker.instance(); 
 
 	public static Consumer<Object> onNext() {
 
@@ -18,5 +23,11 @@ public class Util {
 
 		return () -> System.out.println("Completed");
 	}
+	
+	public static Faker faker() {
+		return FAKER;
+	}
+	
+	
 
 }
